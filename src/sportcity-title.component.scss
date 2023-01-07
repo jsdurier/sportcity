@@ -1,0 +1,13 @@
+:host {
+	color: white;
+	font-size: 40px;
+	font-family: "Gill Sans Extrabold", sans-serif;
+
+	> div {
+		> div:nth-child(2) {
+			background: -webkit-linear-gradient(#fff, #c73);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}

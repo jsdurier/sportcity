@@ -1,0 +1,26 @@
+$color1: #814C64;
+$color2: #2F2C54;
+
+:host > div {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+
+	> div {
+		flex: 1;
+		height: 100%;
+	}
+
+	> div:nth-child(1) {
+		background: linear-gradient($color1, $color2 75%);
+		// background: linear-gradient();
+	}
+
+	> div:nth-child(2) {
+		background: $color2;
+	}
+}
+
+p {
+	color: white;
+}

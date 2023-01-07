@@ -1,0 +1,8 @@
+<div>
+	<wp-integer-graduation
+		*ngFor="let value of values; trackBy:trackBy"
+		[value]="value.value"
+		[style.left]="value.position + 'px'"
+		[isSelected]="isSelected(value.value)"
+	></wp-integer-graduation>
+</div>

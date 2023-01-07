@@ -1,0 +1,17 @@
+:host > div {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.title {
+		wp-title {
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
+
+	.main-content {
+		margin-top: 70px;
+		flex: 1;
+	}
+}

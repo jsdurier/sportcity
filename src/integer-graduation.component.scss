@@ -1,0 +1,41 @@
+:host > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Source Sans Pro,Helvetica Neue,sans-serif;
+	color: #aaa;
+
+	.value {
+		font-size: 15px;
+		transition: all, 0.25s ease;
+	}
+
+	> .graduation-container {
+		height: 60px;
+		position: relative;
+		> div {
+			height: 20px;
+			background-color: #aaa;
+			width: 2px;
+			position: absolute;
+			bottom: 0;
+			transition: all 0.25s ease;
+		}
+	}
+
+	&.selected {
+		color: black;
+
+		.value {
+			font-size: 45px;
+		}
+
+		> .graduation-container {
+			> div {
+				height: 50px;
+				background-color: black;
+				width: 3px;
+			}
+		}		
+	}
+}

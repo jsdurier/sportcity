@@ -1,0 +1,13 @@
+:host > div {
+	// background-color: #efefef;
+	height: 150px;
+	position: relative;
+	overflow-x: hidden;
+
+	wp-integer-graduation {
+		display: block;
+		position: absolute;
+		transform: translateX(-50%);
+		bottom: 0;
+	}
+}

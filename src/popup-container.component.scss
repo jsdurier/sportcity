@@ -1,0 +1,19 @@
+:host > div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0,0,0, 0.2);
+
+	> .popup-content {
+		background-color: white;
+		border-radius: 30px 30px 0px 0px;
+		height: 400px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		padding: 50px 10px 30px 10px;
+	}
+}

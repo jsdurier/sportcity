@@ -1,0 +1,16 @@
+<div
+	*ngIf="appendToInput;else timepickerModal"
+	[wpAppendToInput]="inputElement"
+>
+	<!--suppress HtmlUnknownAttribute -->
+	<ng-container *ngTemplateOutlet="timepickerOutlet"></ng-container>
+</div>
+
+<ng-template #timepickerModal>
+	<!--suppress HtmlUnknownAttribute -->
+	<ng-container *ngTemplateOutlet="timepickerOutlet"></ng-container>
+</ng-template>
+
+<ng-template #timepickerOutlet>
+	<ng-content></ng-content>
+</ng-template>

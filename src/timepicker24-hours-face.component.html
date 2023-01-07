@@ -1,0 +1,7 @@
+<wp-timepicker-face
+	[selectedTime]="selectedHour"
+	[faceTime]="hoursList"
+	[format]="format"
+	(timeChange)="hourChange.next($event)"
+	(timeSelected)="onTimeSelected($event)"
+></wp-timepicker-face>
