@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import ContainerWithPaddingComponent from './container-with-padding.component';
 import ContinueButtonComponent from './continue-button.component';
@@ -19,4 +19,12 @@ import TitleComponent from './title.component';
 		TitleComponent
 	]
 })
-export default class RepetitionsCountSelectionPopupComponent { }
+export default class RepetitionsCountSelectionPopupComponent {
+	@Output() valueChange = new EventEmitter<number>();
+
+	value = 15;
+
+	continue(): void {
+		this.valueChange.next(Math.round(this.value));
+	}
+}

@@ -13,13 +13,15 @@
 
 	<div class="main-content">
 		<wp-integer-selector
-			[value]="15.2"
+			[(value)]="value"
 			[min]="0"
 			[max]="30"
 		></wp-integer-selector>
 	</div>
 
 	<wp-container-with-padding>
-		<wp-continue-button></wp-continue-button>
+		<wp-continue-button
+			(click)="continue()"
+		></wp-continue-button>
 	</wp-container-with-padding>
 </div>

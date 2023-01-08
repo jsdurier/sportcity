@@ -1,0 +1,9 @@
+<div>
+	<div
+		*ngFor="let layer of layers"
+	>
+		<ng-template [ngTemplateOutlet]="layer.template"></ng-template>
+		<!-- <ng-container *ngComponentOutlet="layer"></ng-container> -->
+		<!-- <ng-container *ngTemplateOutlet="layer"></ng-container> -->
+	</div>
+</div>

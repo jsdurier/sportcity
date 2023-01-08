@@ -1,0 +1,33 @@
+:host > div {
+	height: 100%;
+	padding: 0px 20px;
+	font-family: Source Sans Pro,Helvetica Neue,sans-serif;
+	display: flex;
+	flex-direction: column;
+
+	.title-group {
+		.title {
+			font-size: 40px;
+			font-weight: 400;
+		}
+
+		.subtitle {
+			color: #aaa;
+			font-size: 35px;
+			font-weight: lighter;
+		}
+	}
+
+	.center {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.time {
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: center;
+	}
+}

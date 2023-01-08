@@ -1,0 +1,32 @@
+$color1: #FFF7F2;
+$color2: #FFF;
+
+:host > div {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+
+	> div:not(.line) {
+		height: 100%;
+	}
+
+	> div:nth-child(1) {
+		background: linear-gradient($color1, $color2 75%);
+		width: 100px; // TODO
+		// background: linear-gradient();
+	}
+
+	> div:nth-child(2) {
+		background: $color2;
+		flex: 1;
+	}
+
+	.line {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 2px;
+		background-color: orange;
+		width: 100px; // TODO
+	}
+}

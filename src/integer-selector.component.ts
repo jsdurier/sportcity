@@ -3,14 +3,19 @@ import {
 	ChangeDetectorRef,
 	Component,
 	ElementRef,
+	EventEmitter,
 	HostListener,
-	Input
+	Input,
+	Output
 } from '@angular/core';
 
 import IntegerGraduationComponent from './integer-graduation.component';
 
 const UNIT_SPACE_PX = 50;
 
+/**
+ * TODO click
+ */
 @Component({
 	selector: 'wp-integer-selector',
 	standalone: true,
@@ -22,13 +27,11 @@ const UNIT_SPACE_PX = 50;
 	]
 })
 export default class IntegerSelectorComponent {
-	/**
-	 * TODO
-	 * bounds min/max
-	 */
 	@Input() value!: number;
 	@Input() min!: number;
 	@Input() max!: number;
+
+	@Output() valueChange = new EventEmitter<number>();
 
 	private _width_px!: number;
 	private _startClientX?: number;
@@ -40,9 +43,21 @@ export default class IntegerSelectorComponent {
 	) { }
 
 	ngAfterViewInit(): void {
-		const rect = this._elementRef.nativeElement.getBoundingClientRect();
-		this._width_px = rect.width;
-		this._changeDetectorRef.detectChanges();
+		/**
+		 * Hack to have _width_px not null.
+		 */
+		setTimeout(
+			() => {
+				const rect = this._elementRef.nativeElement.getBoundingClientRect();
+				this._width_px = rect.width;
+				if (this._width_px === 0) {
+					console.error('IntegerSelectorComponent width null');
+					return;
+				}
+				this._changeDetectorRef.detectChanges();
+			},
+			100
+		);
 	}
 
 	@HostListener(
@@ -56,13 +71,10 @@ export default class IntegerSelectorComponent {
 		const gap_px = this._startClientX - a.clientX;
 		const gap = gap_px / UNIT_SPACE_PX;
 		const newValue = this._valueBeforeDrag + gap;
-		if (newValue < this.min || newValue > this.max) {
+		if (newValue < this.min || newValue > this.max) {
 			return;
 		}
-		this.value = this._valueBeforeDrag + gap;
-		/**
-		 * TODO emit change
-		 */
+		this.valueChange.next(this._valueBeforeDrag + gap);
 	};
 
 	@HostListener(

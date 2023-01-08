@@ -1,0 +1,19 @@
+$animationDuration: 1s;
+
+:host > div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	animation: fadeout $animationDuration ease forwards;
+}
+
+@keyframes fadeout {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

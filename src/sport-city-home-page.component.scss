@@ -1,0 +1,14 @@
+:host > div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	// background-color: orange;
+
+	> div {
+		border-radius: 20px;
+		padding: 5px 20px;
+		background-color: #aaa;
+	}
+}
