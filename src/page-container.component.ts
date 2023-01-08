@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import {
 	Component,
 	ContentChild,
-	EmbeddedViewRef,
-	ViewContainerRef
+	ViewContainerRef,
+	ViewRef
 } from '@angular/core';
 
 import ShowPageService from './show-page.service';
@@ -21,9 +21,9 @@ import TransitionPageComponent from './transition-page.component';
 	]
 })
 export default class PageContainerComponent {
-	@ContentChild(TemplateMarker) firstPage!: TemplateMarker;
+	@ContentChild(TemplateMarker) firstPage?: TemplateMarker;
 
-	private _embeddedViewRef?: EmbeddedViewRef<any>;
+	private _embeddedViewRef?: ViewRef;
 
 	constructor(
 		private readonly _showPageService: ShowPageService,
@@ -31,6 +31,10 @@ export default class PageContainerComponent {
 	) { }
 
 	ngAfterContentInit(): void {
+		console.log('PageContainerComponent.ngAfterContentInit');
+		if (this.firstPage === undefined) {
+			return;
+		}
 		const template = this.firstPage.template;
 		this._embeddedViewRef = this._viewContainerRef.createEmbeddedView(template);
 	}
@@ -43,7 +47,8 @@ export default class PageContainerComponent {
 			) => {
 				if (animation === undefined) {
 					this._embeddedViewRef?.destroy();
-					this._viewContainerRef.createComponent(componentClass);
+					const componentRef = this._viewContainerRef.createComponent(componentClass);
+					this._embeddedViewRef = componentRef.hostView;
 					return {};
 				}
 				const transitionPageComponentRef = this._viewContainerRef.createComponent(TransitionPageComponent);
@@ -58,6 +63,7 @@ export default class PageContainerComponent {
 						0
 					);
 					transitionPageComponentRef.destroy();
+					this._embeddedViewRef = e.hostView;
 				});
 				return {};
 			});

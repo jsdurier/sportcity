@@ -1,5 +1,11 @@
-import { Component } from '@angular/core';
+import {
+	ChangeDetectorRef,
+	Component,
+	NgZone
+} from '@angular/core';
+import { Unsubscribable } from 'rxjs';
 
+import RelaxTimeService from './relax-time.service';
 import SubtitleComponent from './subtitle.component';
 
 @Component({
@@ -15,21 +21,39 @@ export default class TimeRemainingComponent {
 	value!: number;
 
 	private _startTime: number = Date.now(); // TODO
-	private _duration_s = 10; // TODO
+	private readonly _subscriptions: Unsubscribable[] = [];
+
+	constructor(
+		private readonly _relaxTimeService: RelaxTimeService,
+		private readonly _ngZone: NgZone,
+		private readonly _cd: ChangeDetectorRef
+	) { }
 
 	ngOnInit(): void {
 		this.value = this.computeValue();
-		const intervalRef = setInterval(
-			() => {
-				const newValue = this.computeValue();
-				if (newValue < 0) {
+		this._ngZone.runOutsideAngular(() => {
+			const intervalRef = setInterval(
+				() => {
+					const newValue = this.computeValue();
+					if (newValue < 0) {
+						clearInterval(intervalRef);
+					} else {
+						this.value = newValue;
+						this._cd.detectChanges();
+					}
+				},
+				1000
+			);
+			this._subscriptions.push({
+				unsubscribe() {
 					clearInterval(intervalRef);
-				} else {
-					this.value = newValue;
 				}
-			},
-			1000
-		);
+			});
+		});
+	}
+
+	ngOnDestroy(): void {
+		this._subscriptions.forEach(e => e.unsubscribe());
 	}
 
 	private computeValue(): number {
@@ -37,5 +61,9 @@ export default class TimeRemainingComponent {
 		const delta_ms = now - this._startTime;
 		const newValue = Math.round(this._duration_s - delta_ms / 1000);
 		return newValue;
+	}
+
+	private get _duration_s(): number {
+		return this._relaxTimeService.relaxTime_s;
 	}
 }

@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import {
+	Component,
+	ContentChild
+} from '@angular/core';
 
 import BackgroundComponent from './background-2';
 import ExercisesLeftComponent from './exercises-left.component';
 import FinishWorkoutButtonComponent from './finish-workout-button.component';
 import LayersComponent from './layers.component';
+import PageContainerComponent from './page-container.component';
 import TemplateMarker from './template-marker.directive';
 
 @Component({
@@ -16,7 +20,10 @@ import TemplateMarker from './template-marker.directive';
 		ExercisesLeftComponent,
 		FinishWorkoutButtonComponent,
 		LayersComponent,
+		PageContainerComponent,
 		TemplateMarker
 	]
 })
-export default class SessionContainerComponent { }
+export default class SessionContainerComponent {
+	@ContentChild(TemplateMarker) templateMarker!: TemplateMarker;
+}

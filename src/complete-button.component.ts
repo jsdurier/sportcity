@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 	templateUrl: './complete-button.component.html',
 	styleUrls: ['./complete-button.component.scss']
 })
-export default class CompleteButtonComponent { }
+export default class CompleteButtonComponent { 
+}

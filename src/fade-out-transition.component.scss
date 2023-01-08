@@ -7,6 +7,7 @@ $animationDuration: 1s;
 	right: 0;
 	left: 0;
 	animation: fadeout $animationDuration ease forwards;
+	z-index: 1;
 }
 
 @keyframes fadeout {

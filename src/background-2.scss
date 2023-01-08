@@ -6,14 +6,12 @@ $color2: #FFF;
 	display: flex;
 	flex-direction: row;
 
-	> div:not(.line) {
+	> div {
 		height: 100%;
 	}
 
 	> div:nth-child(1) {
 		background: linear-gradient($color1, $color2 75%);
-		width: 100px; // TODO
-		// background: linear-gradient();
 	}
 
 	> div:nth-child(2) {
@@ -22,11 +20,7 @@ $color2: #FFF;
 	}
 
 	.line {
-		position: absolute;
-		top: 0;
-		left: 0;
 		height: 2px;
 		background-color: orange;
-		width: 100px; // TODO
 	}
 }

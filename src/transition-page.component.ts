@@ -5,7 +5,8 @@ import {
 	EmbeddedViewRef,
 	Type,
 	ViewChild,
-	ViewContainerRef
+	ViewContainerRef,
+	ViewRef
 } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
@@ -24,7 +25,7 @@ export default class TransitionPageComponent {
 	) container!: ViewContainerRef;
 
 	data?: {
-		previousViewRef: EmbeddedViewRef<any>;
+		previousViewRef: ViewRef;
 		nextViewComponent: Type<unknown>;
 		animation: IAnimation;
 	};

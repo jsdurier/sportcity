@@ -1,6 +1,7 @@
 import {
 	EmbeddedViewRef,
-	ViewContainerRef
+	ViewContainerRef,
+	ViewRef
 } from '@angular/core';
 import {
 	Observable,
@@ -8,7 +9,7 @@ import {
 } from 'rxjs';
 
 export default abstract class AbstractTransitionOutComponent {
-	data?: EmbeddedViewRef<unknown>;
+	data?: ViewRef;
 	abstract container: ViewContainerRef;
 
 	private readonly _end$ = new Subject<void>();

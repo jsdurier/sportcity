@@ -6,19 +6,15 @@
 		class="page"
 	>
 		<div class="header">
-			<wp-exercises-left></wp-exercises-left>
+			<wp-session-time></wp-session-time>
 	
 			<wp-finish-workout-button></wp-finish-workout-button>
 		</div>
 	
 		<div class="main-content">
 			<wp-page-container>
-				<ng-container *wpTemplateMarker>
-					<ng-container *ngTemplateOutlet="templateMarker.template"></ng-container>
-				</ng-container>
-				<!-- TODO -->
+				<!-- <wp-first-exercise *wpTemplateMarker></wp-first-exercise> -->
 			</wp-page-container>
-			<!-- <ng-content></ng-content> -->
 		</div>
 	</div>
 </wp-layers>
