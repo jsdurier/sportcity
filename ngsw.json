@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1673219975070,
+  "timestamp": 1673222048635,
   "index": "https://jsdurier.github.io/sportcity/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "https://jsdurier.github.io/sportcity/favicon.ico",
         "https://jsdurier.github.io/sportcity/index.html",
-        "https://jsdurier.github.io/sportcity/main.e75d834e1a1c416c.js",
+        "https://jsdurier.github.io/sportcity/main.0fca834cdc53479c.js",
         "https://jsdurier.github.io/sportcity/manifest.webmanifest",
         "https://jsdurier.github.io/sportcity/polyfills.b2f87b5306bb70e7.js",
         "https://jsdurier.github.io/sportcity/runtime.94c7252e84e08c79.js",
-        "https://jsdurier.github.io/sportcity/styles.d0e1f7e5a921d519.css"
+        "https://jsdurier.github.io/sportcity/styles.9ccb8c333d298cf0.css"
       ],
       "patterns": []
     },
@@ -54,12 +54,12 @@
     "https://jsdurier.github.io/sportcity/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://jsdurier.github.io/sportcity/assets/squat.png": "5d266af4b931db6c79be9be432041f2ed3cda72f",
     "https://jsdurier.github.io/sportcity/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://jsdurier.github.io/sportcity/index.html": "5d452a26fd7110a30c0fba16a48c19e8eb259708",
-    "https://jsdurier.github.io/sportcity/main.e75d834e1a1c416c.js": "8207fd89fce4b7b4ba268e69ddf7875d025735b2",
+    "https://jsdurier.github.io/sportcity/index.html": "8a3a8cea78f0727bea7851a1cc9b0cef3588943f",
+    "https://jsdurier.github.io/sportcity/main.0fca834cdc53479c.js": "5864e7e2e16dd644682ab0443ae322cf62835287",
     "https://jsdurier.github.io/sportcity/manifest.webmanifest": "db194c21853b1bfd26fefe0479d5c38595660bba",
     "https://jsdurier.github.io/sportcity/polyfills.b2f87b5306bb70e7.js": "868df52f0a11058d32ab63efce77a807d7365b2e",
     "https://jsdurier.github.io/sportcity/runtime.94c7252e84e08c79.js": "4c2fde80786f8ff56335169f28e4447e84e5b0d1",
-    "https://jsdurier.github.io/sportcity/styles.d0e1f7e5a921d519.css": "1b8040241234392ebc25baf7e446ff333836fc36"
+    "https://jsdurier.github.io/sportcity/styles.9ccb8c333d298cf0.css": "abc4c5fc890445f8d1078f1afc075fb20b4c9951"
   },
   "navigationUrls": [
     {
