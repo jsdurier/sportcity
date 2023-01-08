@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-		"build-pages": "ng build --configuration production --base-href \"https://github.com/jsdurier/sportcity\"",
+		"build-pages": "ng build --configuration production --base-href \"https://jsdurier.github.io/sportcity/\"",
 		"publish-pages": "angular-cli-ghpages --dir=dist/sportcity"
   },
   "private": true,
