@@ -12,6 +12,7 @@ specifiers:
   '@angular/platform-browser': ^14.2.0
   '@angular/platform-browser-dynamic': ^14.2.0
   '@angular/router': ^14.2.0
+  '@angular/service-worker': 15.0.1
   '@fortawesome/angular-fontawesome': ^0.11.1
   '@fortawesome/fontawesome-svg-core': ^6.2.0
   '@fortawesome/free-solid-svg-icons': ^6.2.0
@@ -39,6 +40,7 @@ dependencies:
   '@angular/platform-browser': 14.2.12_182fa4e1eee7c2f320591d6123fd10d7
   '@angular/platform-browser-dynamic': 14.2.12_f0a0776655196026889af3d16d19de8f
   '@angular/router': 14.2.12_ce944ba676b1f032f5f9b6b302495826
+  '@angular/service-worker': 15.0.1_c4fd5394108d50123861f253a8b53f5b
   '@fortawesome/angular-fontawesome': 0.11.1_f1f0a286f806f6ba6558cf7b7cd83733
   '@fortawesome/fontawesome-svg-core': 6.2.1
   '@fortawesome/free-solid-svg-icons': 6.2.1
@@ -48,7 +50,7 @@ dependencies:
   zone.js: 0.11.8
 
 devDependencies:
-  '@angular-devkit/build-angular': 14.2.10_70143656be5bc742b67b001c174af5d6
+  '@angular-devkit/build-angular': 14.2.10_0f82992f373d1c18e2208a658d7860af
   '@angular/cli': 14.2.10
   '@angular/compiler-cli': 14.2.12_58ef5c37f22de0bd91b0c2eb9c7547cd
   '@types/jasmine': 4.0.3
@@ -86,7 +88,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular/14.2.10_70143656be5bc742b67b001c174af5d6:
+  /@angular-devkit/build-angular/14.2.10_0f82992f373d1c18e2208a658d7860af:
     resolution: {integrity: sha512-VCeZAyq4uPCJukKInaSiD4i/GgxgcU4jFlLFQtoYNmaBS4xbPOymL19forRIihiV0dwNEa2L694vRTAPMBxIfw==}
     engines: {node: ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -117,6 +119,7 @@ packages:
       '@angular-devkit/build-webpack': 0.1402.10_62c6c744bfd5412e5933549e27ff2bfb
       '@angular-devkit/core': 14.2.10
       '@angular/compiler-cli': 14.2.12_58ef5c37f22de0bd91b0c2eb9c7547cd
+      '@angular/service-worker': 15.0.1_c4fd5394108d50123861f253a8b53f5b
       '@babel/core': 7.18.10
       '@babel/generator': 7.18.12
       '@babel/helper-annotate-as-pure': 7.18.6
@@ -401,6 +404,19 @@ packages:
       '@angular/core': 14.2.12_rxjs@7.5.7+zone.js@0.11.8
       '@angular/platform-browser': 14.2.12_182fa4e1eee7c2f320591d6123fd10d7
       rxjs: 7.5.7
+      tslib: 2.4.1
+    dev: false
+
+  /@angular/service-worker/15.0.1_c4fd5394108d50123861f253a8b53f5b:
+    resolution: {integrity: sha512-kmB/aP7mkfnbdruwCB5XtuI3O3WG/CqtEgL824VXaycSlLoHprT/+YBVM+kNvmM9S7+70IxEZmqEvd/hjHUDeA==}
+    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
+    hasBin: true
+    peerDependencies:
+      '@angular/common': 15.0.1
+      '@angular/core': 15.0.1
+    dependencies:
+      '@angular/common': 14.2.12_@angular+core@14.2.12+rxjs@7.5.7
+      '@angular/core': 14.2.12_rxjs@7.5.7+zone.js@0.11.8
       tslib: 2.4.1
     dev: false
 
