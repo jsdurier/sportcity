@@ -6,6 +6,10 @@
 	position: relative;
 	font-family: Source Sans Pro,Helvetica Neue,sans-serif;
 
+	&::selection {
+		color: none;
+		background: none;
+	}
 	// fa-icon {
 	// 	position: absolute;
 	// 	right: 20px;

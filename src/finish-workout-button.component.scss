@@ -1,11 +1,26 @@
 :host > div {
-	padding: 10px 15px;
-	background-color: #F5F4F7;
-	border-radius: 15px;
-	text-align: center;
+	// padding: 10px 15px;
+	// background-color: #F5F4F7;
+	// text-align: center;
 	position: relative;
 	font-family: Source Sans Pro,Helvetica Neue,sans-serif;
 	font-size: 14px;
+	border-radius: 20px;
+	padding: 15px 30px;
+	background-color: #eee;
+	transition: all 50ms ease;
+	text-align: center;
+
+	&:hover {
+		background-color: #ccc;
+		color: #444;
+		scale: 0.9;
+	}
+
+	&::selection {
+		color: none;
+		background: none;
+	}
 
 	// fa-icon {
 	// 	position: absolute;

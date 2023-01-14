@@ -38,7 +38,9 @@ export default class SportCityAppComponent {
 	constructor(
 		private readonly _showPageService: ShowPageService,
 		private readonly _trainingSessionService: TrainingSessionService
-	) { }
+	) {
+		document.oncontextmenu = () => false;
+	}
 
 	ngOnInit(): void {
 		setTimeout(
