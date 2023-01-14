@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1673703396257,
+  "timestamp": 1673703578737,
   "index": "https://jsdurier.github.io/sportcity/index.html",
   "assetGroups": [
     {
@@ -54,7 +54,7 @@
     "https://jsdurier.github.io/sportcity/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://jsdurier.github.io/sportcity/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://jsdurier.github.io/sportcity/assets/squat.png": "5d266af4b931db6c79be9be432041f2ed3cda72f",
-    "https://jsdurier.github.io/sportcity/assets/workout.jpg": "6adcfe4b30c176b1116e5868338ca4d7c0accb87",
+    "https://jsdurier.github.io/sportcity/assets/workout.jpg": "cafba5474ecf89495fabb90430cd917a5f316efb",
     "https://jsdurier.github.io/sportcity/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "https://jsdurier.github.io/sportcity/index.html": "f5d65c251742b7ab0b3e799a33dc9b73590bd39a",
     "https://jsdurier.github.io/sportcity/main.d5d175eba7d17c11.js": "1bcd03d90b878f499867bf076d4071af7392449f",
