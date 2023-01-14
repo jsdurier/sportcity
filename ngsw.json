@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1673222048635,
+  "timestamp": 1673703066542,
   "index": "https://jsdurier.github.io/sportcity/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://jsdurier.github.io/sportcity/favicon.ico",
         "https://jsdurier.github.io/sportcity/index.html",
-        "https://jsdurier.github.io/sportcity/main.0fca834cdc53479c.js",
+        "https://jsdurier.github.io/sportcity/main.cdca2ed56b2b10b9.js",
         "https://jsdurier.github.io/sportcity/manifest.webmanifest",
         "https://jsdurier.github.io/sportcity/polyfills.b2f87b5306bb70e7.js",
         "https://jsdurier.github.io/sportcity/runtime.94c7252e84e08c79.js",
@@ -37,7 +37,8 @@
         "https://jsdurier.github.io/sportcity/assets/icons/icon-512x512.png",
         "https://jsdurier.github.io/sportcity/assets/icons/icon-72x72.png",
         "https://jsdurier.github.io/sportcity/assets/icons/icon-96x96.png",
-        "https://jsdurier.github.io/sportcity/assets/squat.png"
+        "https://jsdurier.github.io/sportcity/assets/squat.png",
+        "https://jsdurier.github.io/sportcity/assets/workout.jpg"
       ],
       "patterns": []
     }
@@ -53,9 +54,10 @@
     "https://jsdurier.github.io/sportcity/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://jsdurier.github.io/sportcity/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://jsdurier.github.io/sportcity/assets/squat.png": "5d266af4b931db6c79be9be432041f2ed3cda72f",
+    "https://jsdurier.github.io/sportcity/assets/workout.jpg": "6adcfe4b30c176b1116e5868338ca4d7c0accb87",
     "https://jsdurier.github.io/sportcity/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://jsdurier.github.io/sportcity/index.html": "8a3a8cea78f0727bea7851a1cc9b0cef3588943f",
-    "https://jsdurier.github.io/sportcity/main.0fca834cdc53479c.js": "5864e7e2e16dd644682ab0443ae322cf62835287",
+    "https://jsdurier.github.io/sportcity/index.html": "9c68222df9d486f460be879fa1984efee3a8bb3c",
+    "https://jsdurier.github.io/sportcity/main.cdca2ed56b2b10b9.js": "03d99855e43ae8b1153615912421b698e2c75731",
     "https://jsdurier.github.io/sportcity/manifest.webmanifest": "db194c21853b1bfd26fefe0479d5c38595660bba",
     "https://jsdurier.github.io/sportcity/polyfills.b2f87b5306bb70e7.js": "868df52f0a11058d32ab63efce77a807d7365b2e",
     "https://jsdurier.github.io/sportcity/runtime.94c7252e84e08c79.js": "4c2fde80786f8ff56335169f28e4447e84e5b0d1",
