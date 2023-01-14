@@ -10,6 +10,9 @@
 		color: none;
 		background: none;
 	}
+	&::-moz-selection {
+		background: transparent;
+	}
 	// fa-icon {
 	// 	position: absolute;
 	// 	right: 20px;
